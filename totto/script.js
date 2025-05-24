@@ -11,12 +11,11 @@ function agregarAlCarrito(nombre, precio) {
 function verCarrito() {
   const lista = document.getElementById("listaCarrito");
   lista.innerHTML = "";
-  carrito.forEach((item, index) => {
+  carrito.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
     lista.appendChild(li);
   });
-
   document.getElementById("total").textContent = total.toLocaleString();
   document.getElementById("carrito").classList.remove("oculto");
 }

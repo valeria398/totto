@@ -2,39 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Totto - Tienda</title>
+  <title>Totto Colombia - Tienda Online</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Totto</h1>
-    <button onclick="verCarrito()">🛒 Ver Carrito (<span id="contador">0</span>)</button>
+  <header class="navbar">
+    <div class="logo">TOTTO</div>
+    <input type="text" placeholder="Buscar productos..." class="buscador">
+    <button onclick="verCarrito()" class="btn-carrito">🛒 Carrito (<span id="contador">0</span>)</button>
   </header>
 
-  <main>
-    <div class="producto">
-      <img src="https://via.placeholder.com/150" alt="Mochila Totto">
-      <h3>Mochila Clásica</h3>
-      <p>$150.000</p>
-      <button onclick="agregarAlCarrito('Mochila Clásica', 150000)">Agregar al carrito</button>
-    </div>
+  <section class="banner">
+    <img src="https://totto.vtexassets.com/assets/vtex.file-manager-graphql/images/e54d0cb7-9d14-4c9f-a160-7c1a3a445246___4363eec3a28cb2f9e1203d28b7d6d36e.jpg" alt="Banner" />
+  </section>
 
+  <main class="productos">
     <div class="producto">
-      <img src="https://via.placeholder.com/150" alt="Lonchera Totto">
+      <img src="https://totto.vtexassets.com/arquivos/ids/218166-800-auto?v=638445799094830000&width=800&height=auto&aspect=true" alt="Mochila Negra">
+      <h3>Mochila Negra</h3>
+      <p>$150.000</p>
+      <button onclick="agregarAlCarrito('Mochila Negra', 150000)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://totto.vtexassets.com/arquivos/ids/218135-800-auto?v=638445798820270000&width=800&height=auto&aspect=true" alt="Lonchera Escolar">
       <h3>Lonchera Escolar</h3>
       <p>$85.000</p>
       <button onclick="agregarAlCarrito('Lonchera Escolar', 85000)">Agregar al carrito</button>
     </div>
-
-    <!-- Más productos aquí -->
+    <div class="producto">
+      <img src="https://totto.vtexassets.com/arquivos/ids/218101-800-auto?v=638445798635100000&width=800&height=auto&aspect=true" alt="Maleta Deportiva">
+      <h3>Maleta Deportiva</h3>
+      <p>$130.000</p>
+      <button onclick="agregarAlCarrito('Maleta Deportiva', 130000)">Agregar al carrito</button>
+    </div>
   </main>
 
-  <div id="carrito" class="oculto">
+  <div id="carrito" class="carrito oculto">
     <h2>🛒 Carrito de compras</h2>
     <ul id="listaCarrito"></ul>
     <p>Total: $<span id="total">0</span></p>
     <button onclick="cerrarCarrito()">Cerrar</button>
   </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Tienda Totto (versión educativa) - Desarrollado por Valeria Sánchez</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
